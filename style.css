@@ -28,3 +28,23 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.title {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .gif-container {
+    height: 400px;
+  }
+}
