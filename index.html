@@ -24,38 +24,41 @@
         <button class="btn" id="yesBtn" onclick="nextScreen()">TARA</button>
         <button class="btn" id="noBtn" onclick="moveButton()">AYOKO</button>
         <script>
-                           const noButton = document.getElementById('noBtn');
-                           const yesButton = document.getElementById('yesBtn');
-                           const image = document.getElementById('index-img');
-                           let clickCount = 0;
+                                     const noButton = document.getElementById('noBtn');
+                                     const yesButton = document.getElementById('yesBtn');
+                                     const image = document.getElementById('index-img');
+                                     let clickCount = 0;
 
-                           function nextScreen(){
-                            window.location.href='celebration.html';
-                           }
+                                     function nextScreen(){
+                                      window.location.href='celebration.html';
+                                     }
 
-                    function moveButton() {
-                      clickCount++;
-                      const bodyWidth = document.body.clientWidth;
-          const bodyHeight = document.body.clientHeight;
+                              function moveButton() {
+                                clickCount++;
+                                const bodyWidth = document.body.clientWidth;
+                    const bodyHeight = document.body.clientHeight;
 
-          const randomX = Math.floor(Math.random() * (bodyWidth - noButton.offsetWidth));
-          const randomY = Math.floor(Math.random() * (bodyHeight - noButton.offsetHeight));
+                    const randomX = Math.floor(Math.random() * (bodyWidth - noButton.offsetWidth));
+                    const randomY = Math.floor(Math.random() * (bodyHeight - noButton.offsetHeight));
 
-          noButton.style.position = 'absolute';
-          noButton.style.left = `${randomX}px`;
-          noButton.style.top = `${randomY}px`;
-
-
+                    noButton.style.position = 'absolute';
+                    noButton.style.left = `${randomX}px`;
+                    noButton.style.top = `${randomY}px`;
 
 
-                      if (clickCount == 4) {
-                        document.getElementById("p1").innerHTML = "HALA GAGO AYAW PA!";
-                        image.src = 'https://i.gifer.com/JqHu.gif';
 
-                      }else if (clickCount == 6) {
-                        document.getElementById("p1").innerHTML = "HALA GAGO WALA TALAGA?";
-                      }
-                    }
+
+                                if (clickCount == 4) {
+                                  document.getElementById("p1").innerHTML = "HALA GAGO AYAW PA!";
+                                  image.src = 'https://media1.tenor.com/m/4JTA4to3ka8AAAAC/rabbit-crying-bunny-rabbit-crying.gif';
+
+                                }else if (clickCount == 6) {
+                                  document.getElementById("p1").innerHTML = "HALA GAGO WALA TALAGA?";
+          image.src = 'https://media1.tenor.com/m/AYna6Vw1t_UAAAAC/snowball-secret-life-of-pets.gif';
+
+
+                                }
+                              }
         </script>
       </div>
     </div>
