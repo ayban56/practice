@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wala to</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 id="p1">SAMGYUP NALANG OH?????</h1>
+      </div>
+      <div>
+        <img
+          class="gif-container"
+          height="500"
+          src="https://media1.tenor.com/m/NEXkjuU30Z0AAAAd/snowball-bunny-carrot.gif"
+          alt="gif"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesBtn" onclick="nextScreen()">TARA</button>
+        <button class="btn" id="noBtn" onclick="moveButton()">AYOKO</button>
+        <script>
+                           const noButton = document.getElementById('noBtn');
+                           const yesButton = document.getElementById('yesBtn');
+                           let clickCount = 0;
+
+                           function nextScreen(){
+                            window.location.href='celebration.html';
+                           }
+
+                    function moveButton() {
+                      clickCount++;
+                      const bodyWidth = document.body.clientWidth;
+          const bodyHeight = document.body.clientHeight;
+
+          const randomX = Math.floor(Math.random() * (bodyWidth - noButton.offsetWidth));
+          const randomY = Math.floor(Math.random() * (bodyHeight - noButton.offsetHeight));
+
+          noButton.style.position = 'absolute';
+          noButton.style.left = `${randomX}px`;
+          noButton.style.top = `${randomY}px`;
+
+
+
+
+                      if (clickCount == 2) {
+                        document.getElementById("p1").innerHTML = "HALA GAGO AYAW PA!";
+
+                      }
+                    }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
